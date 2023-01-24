@@ -1,7 +1,6 @@
 import BlockWithTextAndImg from '../blockWithTextAndImg/BlockWithTextAndImg';
 
 import styled from 'styled-components';
-import './bullet.css';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import './bullet.css';
+
 
 import H1 from '../../styles/H1/H1';
 import Button from '../../styles/Button/Button';
