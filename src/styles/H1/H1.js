@@ -5,6 +5,7 @@ const H1 = styled.h1`
     font-weight: 700;
     font-size: 4.6em;
     line-height: 1.2em;
+    margin-bottom: ${({mrgb = 0})=> mrgb}px;
 `
 
 export default H1;

@@ -35,15 +35,14 @@ const Bar = styled.div`
         animation: rotateL 1.5s cubic-bezier(0.5, 0.2, 0.2, 1);
     }
 `
-
-const MenuBlock = styled.section`
-    @media(${({ theme }) => theme.media.medium}){
-        background:pink;
-        ${Navbar} {
-            display:none;
-            background:yellow;
-        }
+const MobileNavbar = styled.div`
+    display:block;
+    @media(${({ theme }) => theme.media.medium}){    
+        display:none;
     }
+`
+const MenuBlock = styled.section`
+    
     &.show {
         ${Bar} {
             &:nth-of-type(1) {
@@ -57,6 +56,9 @@ const MenuBlock = styled.section`
             &:nth-of-type(3) {
                 transform: translateY(-7px) rotate(-45deg);
             }
+        }
+        ${MobileNavbar} {
+            display:block;
         }
     }
 `
@@ -79,8 +81,9 @@ const Menu = () => {
                 <Bar/>
             </MenuBtn>
         
-            
-            <Navbar/>
+            <MobileNavbar>
+                <Navbar/>
+            </MobileNavbar>
         </MenuBlock>
     )
 }

@@ -8,6 +8,7 @@ import Slider from '../sliderMain/SliderMain';
 import SliderCategory from '../sliderCategory/SliderCategory';
 import BlockWithTextAndImg from '../blockWithTextAndImg/BlockWithTextAndImg';
 import Container from '../../styles/Container/Container';
+import BlockFastNavigation from '../blockFastNavigation/BlockFastNavigation';
  
 
 
@@ -31,7 +32,9 @@ function App() {
             <BlockWithTextAndImg/>
           </Container>
 
-
+          <Container>
+            <BlockFastNavigation/>
+          </Container>
         </main>
 
         
