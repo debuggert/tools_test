@@ -10,5 +10,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
+    font-size:10px;
+    line-height:1em;
   }
 `
