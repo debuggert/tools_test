@@ -32,7 +32,7 @@ function App() {
             <BlockWithTextAndImg/>
           </Container>
 
-          <Container>
+          <Container mrgt={105}>
             <BlockFastNavigation/>
           </Container>
         </main>

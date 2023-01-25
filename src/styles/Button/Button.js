@@ -15,6 +15,9 @@ const Button = styled.button`
     displya:block;
     max-width:320px;
     margin-top:40px;
-
+    transition:0.4s;
+    &:hover {
+        transform:scale(1.03,1.03);
+    }
 `
 export default Button;
