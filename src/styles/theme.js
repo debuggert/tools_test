@@ -7,9 +7,14 @@ export const baseTheme = {
       
       border:'#E2E0DF',
       bg: '#E5E4E8',
+      bg_footer : '#212121',
 
       font: '#212121',
       input: '#F5F5F5',
+      font_input_black: '#C4C4C4',
+      input_black: '#1B1B1B',
+
+      footer_head: '#6F6F6F',
     },
   
     media: {

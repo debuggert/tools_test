@@ -12,10 +12,11 @@ const Button = styled.button`
     color: ${({ theme }) => theme.colors.white};
     border:0;
     width:100%;
-    displya:block;
+    display:block;
     max-width:320px;
     margin-top:40px;
     transition:0.4s;
+    cursor:pointer;
     &:hover {
         transform:scale(1.03,1.03);
     }
