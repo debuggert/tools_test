@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 const SearchBox = styled.div`
     position:relative;
+    width:100%;
+    max-width:480px;
 `;
 const SearchIco = styled.div`
     position:absolute;
@@ -17,6 +19,7 @@ const SearchIco = styled.div`
     z-index:2
 `;
 const SearchInput = styled.input`
+    width:100%;
     padding:12px 12px 12px 54px;
     font-style: normal;
     font-weight: 400;

@@ -10,13 +10,14 @@ const FormContainer = styled.form`
 const InputMail = styled.input`
     background: ${({ theme }) => theme.colors.input_black};
     border:0;
+    outline:none;
     width:100%;
     border-radius: 11px;
     font-style: normal;
     font-weight: 400;
     font-size: 1.6em;
     line-height: 1.02em;
-    padding:19px 210px 19px 20px;
+    padding:19px 175px 19px 20px;
     color: ${({ theme }) => theme.colors.font_input_black};
 `
 
@@ -34,7 +35,7 @@ const SubscrButton = styled(Button)`
     margin-top:0;
     position:absolute;
     top:3px;
-    right:3px;
+    right:4px;
     border-radius:8px;
 `
 

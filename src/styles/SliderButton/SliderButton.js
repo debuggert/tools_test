@@ -9,6 +9,10 @@ const SliderButton = styled.button`
     border:0;
     position:relative;
     cursor:pointer;
+    transition:0.4s;
+    &:hover {
+        transform:scale(1.1,1.1);
+    }
     &:after {
         content:'';
         width:16px;
@@ -21,6 +25,7 @@ const SliderButton = styled.button`
         display:block;
         transform: ${(props) => props.prev ? 'rotate(0)' : 'rotate(180deg)'}
     }
+
 
 `
 

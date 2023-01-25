@@ -42,7 +42,7 @@ const MobileNavbar = styled.div`
     }
 `
 const MenuBlock = styled.section`
-    
+    width:100%;
     &.show {
         ${Bar} {
             &:nth-of-type(1) {
