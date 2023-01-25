@@ -12,6 +12,10 @@ const Block3Column = styled.section`
 const IconBox = styled.a`
     max-width:290px;
     text-decoration:none;
+    transition:0.4s;
+    &:hover {
+        transform:scale(1.02,1.02);
+    }
 `
 const IconBoxImg = styled.div`
     display:flex;
@@ -27,6 +31,15 @@ const IconBoxText = styled.h3`
     text-align: center;
     color: ${({ theme }) => theme.colors.font};
     margin:0 auto;
+`
+const IcobBoxImgFix = styled.div`
+    max-width:${({mw = 290}) => mw }px;
+    img {
+        max-width:100%;
+        width:100%;
+        height:auto;
+    }
+
 `
 
 const BlockFastNavigation = () =>{
@@ -46,7 +59,9 @@ const BlockFastNavigation = () =>{
             </IconBox>
             <IconBox href="#">
                 <IconBoxImg>
-                    <img src="../images/icons/ico_ideas.svg"/>
+                    <IcobBoxImgFix mw="57">
+                        <img src="../images/icons/ico_ideas.png"/>
+                    </IcobBoxImgFix>
                 </IconBoxImg>
                 <IconBoxText>Products Catalog</IconBoxText>
             </IconBox>

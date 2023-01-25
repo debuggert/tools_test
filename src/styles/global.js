@@ -13,4 +13,8 @@ export default createGlobalStyle`
     font-size:10px;
     line-height:1em;
   }
+  .App {
+    overflow:hidden;
+    width:100%;
+  }
 `

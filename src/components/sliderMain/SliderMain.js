@@ -21,6 +21,9 @@ const SlideBox = styled.div`
   overflow:hidden;
   border-radius:16px;
   max-height:675px;
+  @${({theme}) => theme.media.extraLarge} {
+    max-height:550px;
+  }
 `
 
 const SlideImgBox = styled.div`
