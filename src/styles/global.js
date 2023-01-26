@@ -12,6 +12,16 @@ export default createGlobalStyle`
     font-family: 'Inter', sans-serif;
     font-size:10px;
     line-height:1em;
+    @media${({ theme }) => theme.media.extraLarge} {
+        font-size:8px;
+    }
+
+    @media${({ theme }) => theme.media.large} {
+      font-size:6px;
+    }
+    @media${({ theme }) => theme.media.small} {
+        padding-bottom:42px;
+    }
   }
   .App {
     overflow:hidden;

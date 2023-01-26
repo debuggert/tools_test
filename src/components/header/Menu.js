@@ -6,13 +6,13 @@ const MenuBtn = styled.div`
     width: 35px;
     height: 25px;
     position: absolute;
-    top: 13px;
+    top: 30px;
     right: 0;
     outline: none;
     z-index: 305;
     cursor:pointer;
     display:none;
-    @media(${({ theme }) => theme.media.medium}){
+    @media(${({ theme }) => theme.media.small}){
         display:block;
     }
 `
@@ -37,7 +37,7 @@ const Bar = styled.div`
 `
 const MobileNavbar = styled.div`
     display:block;
-    @media(${({ theme }) => theme.media.medium}){    
+    @media(${({ theme }) => theme.media.small}){    
         display:none;
     }
 `

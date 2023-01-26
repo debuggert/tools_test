@@ -20,23 +20,28 @@ const SlideBox = styled.div`
   position:relative;
   overflow:hidden;
   border-radius:16px;
-  max-height:675px;
-  @${({theme}) => theme.media.extraLarge} {
-    max-height:550px;
+  height:675px;
+  @media${({ theme }) => theme.media.extraLarge} {
+    height:550px;
+  }
+  @media${({ theme }) => theme.media.large} {
+    height:490px;
   }
 `
 
 const SlideImgBox = styled.div`
   max-width:100%;
+  height:100%;
   position:relative;
   z-index:1;
   outline:none;
   img {
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
     max-width:100%;
     margin:0 auto;
+    object-fit: cover;
   }
 `
 
@@ -52,6 +57,7 @@ const SlideContent = styled.div`
   display:flex;
   align-items:flex-end;
   color:${({ theme }) => theme.colors.white};
+  
 `
 
 const SlideContentWrapper = styled.div`
@@ -60,7 +66,16 @@ const SlideContentWrapper = styled.div`
   padding-bottom:84px;
   h1 {
     margin-bottom:110px;
+    @media${({ theme }) => theme.media.extraLarge} {
+      margin-bottom:60px;
+    }
   }
+
+  @media${({ theme }) => theme.media.large} {
+    max-width:490px;
+    margin-left:60px;
+  }
+  
 `
 
 
@@ -89,8 +104,16 @@ export default () => {
       </SwiperSlide>
       <SwiperSlide>
         <SlideBox>
-          <BlockWithTextAndImg/>
-        </SlideBox>
+            <SlideImgBox>
+              <img src="../images/main/bg_blockWithTextAndImg.jpg" />
+            </SlideImgBox>
+            <SlideContent>
+              <SlideContentWrapper>
+                <H1>Fiberglass and specialty metals are in&nbsp;stock across the United States</H1>
+                <Button>Shop Now</Button>
+              </SlideContentWrapper>
+            </SlideContent>
+          </SlideBox>
       </SwiperSlide>
       <SwiperSlide>
         <SlideBox>

@@ -14,7 +14,9 @@ const RounderBox = styled.article`
   overflow:hidden;
   display:flex;
   align-items:center;
-
+  @media${({ theme }) => theme.media.extraLarge} {
+    height:590px;
+  }
 `
 const RounderBoxWrapper = styled.div`
   padding:75px;
@@ -39,9 +41,10 @@ const RounderBoxImg = styled.div`
     bottom:0;
     width:70%;
     background: linear-gradient(90deg, #FFFFFF 7.65%, rgba(255, 255, 255, 0.92) 23.96%, rgba(255, 255, 255, 0) 73.83%);
-
+    @media${({ theme }) => theme.media.extraLarge} {
+      width:95%;
+    }
   }
-
 `
 
 const P = styled.p`
@@ -61,7 +64,6 @@ export default function BlockWithTextAndImg() {
         <P>Find the Aluminum and Stainless Steel items for your project in&nbsp;stock and ready to&nbsp;ship today! Avoid project delays and long lead times in&nbsp;a&nbsp;challenging supply chain for specialty metals and non-ferrous items. We&nbsp;are well stocked and here to&nbsp;serve you with guided support.</P>
         <Button>Shop Now</Button>
       </RounderBoxWrapper>
-      
     </RounderBox>
   )
 }

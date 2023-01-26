@@ -7,6 +7,9 @@ const Block3Column = styled.section`
     width:100%;
     max-width:1100px;
     margin:0 auto;
+    @media${({ theme }) => theme.media.small} {
+        display:block;
+    }
 `
 
 const IconBox = styled.a`
@@ -15,6 +18,11 @@ const IconBox = styled.a`
     transition:0.4s;
     &:hover {
         transform:scale(1.02,1.02);
+    }
+    @media${({ theme }) => theme.media.small} {
+        margin:0 auto 30px;
+        max-width:200px;
+        display:block;
     }
 `
 const IconBoxImg = styled.div`
@@ -26,8 +34,8 @@ const IconBoxImg = styled.div`
 const IconBoxText = styled.h3`
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 2.5em;
+    line-height: 1.02em;
     text-align: center;
     color: ${({ theme }) => theme.colors.font};
     margin:0 auto;

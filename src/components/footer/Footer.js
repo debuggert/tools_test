@@ -10,6 +10,12 @@ const FooterContainer = styled.footer`
     color: ${({ theme }) => theme.colors.white};
     background: ${({ theme }) => theme.colors.bg_footer};
     border-radius: 16px 16px 0px 0px;
+    @media${({ theme }) => theme.media.extraLarge} {
+        max-width:970px;
+    }
+    @media${({ theme }) => theme.media.large} {
+        max-width:750px;
+    }
 `
 const FooterWrapper = styled.div`
     padding:37px 23px 13px;
@@ -17,6 +23,10 @@ const FooterWrapper = styled.div`
 const FooterColumn = styled.section`
    display:flex;
    justify-content:space-between;
+   @media${({ theme }) => theme.media.medium} {
+        display:block;
+    }
+    
 `
 
 const FooterNav = styled.div`
@@ -24,11 +34,27 @@ const FooterNav = styled.div`
     width:100%;
     display:flex;
     justify-content:space-between;
-    align-items:flex-start
+    align-items:flex-start;
+    @media${({ theme }) => theme.media.extraLarge} {
+        max-width:490px;
+    }
+    @media${({ theme }) => theme.media.large} {
+        max-width:100%;
+    }
+    @media${({ theme }) => theme.media.small} {
+        flex-direction:column;
+    }
+    
 `
 const FooterSubscr = styled.div`
     max-width:466px;
     width:100%;
+    @media${({ theme }) => theme.media.extraLarge} {
+        max-width:385px;
+    }
+    @media${({ theme }) => theme.media.large} {
+        max-width:100%;
+    }
 `
 
 const FooterNavBox = styled.nav`
@@ -41,6 +67,9 @@ const FooterNavHead = styled.h3`
     font-size: 2em;
     line-height: 1.02em;
     color:  ${({ theme }) => theme.colors.footer_head};
+    @media${({ theme }) => theme.media.small} {
+        font-size:16px;
+    }
 `
 const NavLink = styled.a`
     font-weight: 400;
@@ -52,6 +81,11 @@ const NavLink = styled.a`
     text-decoration:none;
     &:hover {
         text-decoration:underline;
+    }
+    @media${({ theme }) => theme.media.small} {
+        font-size:12px;
+        display:inline-block;
+        margin:0 10px 10px 0;
     }
 `
 const NavLinkPhone = styled.a`
@@ -80,7 +114,10 @@ const NavLinkPhone = styled.a`
         top:50%;
         left:-25px;
         margin-top:-8px;
-        
+    }
+    @media${({ theme }) => theme.media.small} {
+        font-size:12px;
+        margin:15px 0px 0px 25px
     }
 `
 const FooterPayIcons = styled.div`

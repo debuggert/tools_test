@@ -37,6 +37,10 @@ const SubscrButton = styled(Button)`
     top:3px;
     right:4px;
     border-radius:8px;
+    @media${({ theme }) => theme.media.small} {
+        font-size:14px;
+        position:relative;
+    }
 `
 
 const SubscrLabel = styled.label`
@@ -47,6 +51,9 @@ const SubscrLabel = styled.label`
     color: ${({theme}) => theme.colors.footer_head};
     display:block;
     margin-bottom:20px;
+    @media${({ theme }) => theme.media.small} {
+        font-size:14px;
+    }
 `
 
 const FormSubscribe = () => {

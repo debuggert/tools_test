@@ -18,7 +18,7 @@ export const baseTheme = {
     },
   
     media: {
-      extraLarge: '(max-width: 1399px)',
+      extraLarge: '(max-width: 1439px)',
       large: '(max-width: 1120px)',
       medium: '(max-width: 990px)',
       small: '(max-width: 767px)',

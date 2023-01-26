@@ -7,6 +7,19 @@ const QicikOrder = styled.div`
     display:flex;
     align-items:center;
     justify-content:flex-end;
+    @media${({ theme }) => theme.media.small} {
+        position:fixed;
+        bottom:0;
+        left:0;
+        rigth:0;
+        background: ${({theme}) => theme.colors.white};
+        justify-content:space-around;
+        z-index:100;
+        padding:5px;
+        box-shadow: 0px 1px 17px -2px rgba(0,0,0,0.74);
+
+
+    }
 `;
 
 const LinkIcon = styled.a`
@@ -20,6 +33,13 @@ const LinkIcon = styled.a`
     display:flex;
     align-items:center;
     margin-left:16px;
+    @media${({ theme }) => theme.media.small} {
+        font-size:8px;
+        flex-direction:column;
+        margin:0 4px;
+        text-align:center;
+        min-width:43px;
+    }
 `
 const Icon = styled.span`
     display:inline-block;
@@ -39,6 +59,11 @@ const Icon = styled.span`
         max-width:100%;
         height:auto;
     }
+    @media${({ theme }) => theme.media.small} {
+        width: 20px;
+        height: 20px;
+        margin:0 0 3px;
+    }
 `
 
 const CartCounter = styled.span`
@@ -55,7 +80,12 @@ const CartCounter = styled.span`
     line-height: 12px;
     color: ${({ theme }) => theme.colors.white};
     padding:4px 4px 2px;
-    
+    @media${({ theme }) => theme.media.small} {
+        top:-3px;
+        right:-7px;
+        font-size:8px;
+        line-height:8px;
+    }
 `
 
 const QucikNav = () => {

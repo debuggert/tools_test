@@ -20,5 +20,19 @@ const Button = styled.button`
     &:hover {
         transform:scale(1.03,1.03);
     }
+    
+    @media${({ theme }) => theme.media.extraLarge} {
+        max-width:250px;
+        line-height:55px;
+    }
+    @media${({ theme }) => theme.media.large} {
+        max-width:210px;
+        line-height:50px;
+    }
+    @media${({ theme }) => theme.media.small} {
+        font-size:14px;
+        line-height:50px;
+        max-width:240px;
+    }
 `
 export default Button;

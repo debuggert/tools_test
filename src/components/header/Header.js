@@ -9,6 +9,15 @@ const HeaderBox = styled.header`
     margin:0 auto;
     padding:12px 24px 0;
     position:relative;
+    z-index:100;
+    @media${({ theme }) => theme.media.extraLarge} {
+        max-width:970px;
+        padding:12px 0 0;
+    }
+    @media${({ theme }) => theme.media.large} {
+        max-width:770px;
+        padding:10px 12px 0;
+    }
 `
 
 const SmallNav = styled.nav`
@@ -20,24 +29,35 @@ const Container = styled.div`
     margin-bottom:24px;
     display:flex;
     justify-content:space-between;
+
+    @media${({ theme }) => theme.media.small} {
+        margin:0;
+    }
 `
 const ContentColumn = styled.div`
     width:50%;
     display: ${({display = 'block'}) => display };
     ${ ({display}) => display ? css`
-    align-items:center` : ''}
+    align-items:center` : ''};
+    @media${({ theme }) => theme.media.small} {
+        width:100%;
+        display:block;
+    }
 `
 
 const LogoBox = styled.div`
     margin-right:58px;
     display:inline-block;
+    @media${({ theme }) => theme.media.small} {
+        margin:0;
+    }
 `
 
 const SmallLinks = styled.a`
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
-line-height: 19px;
+font-size: 1.6em;
+line-height: 1.02em;
 color: ${({ theme }) => theme.colors.blue};
 border-bottom: 1px solid rgba(72, 89, 240, 0.3);
 text-decoration:none;

@@ -31,7 +31,10 @@ const CategoryBlockInfo = styled.div`
   font-size: 16px;
   line-height: 19px;
   color: #212121;
-
+  @media${({ theme }) => theme.media.small} {
+    line-height:12px;
+    line-height:15px;
+  }
 `
 
 const CategoryBlock = styled.div`
@@ -45,6 +48,10 @@ const CategoryBlock = styled.div`
         transition:0.6s;
       }
     }
+  }
+  @media${({ theme }) => theme.media.small} {
+      width:120px;
+      height:170px;
   }
 `
 
@@ -105,9 +112,30 @@ export default () => {
         spaceBetween={40}
         slidesPerView={6}
         loop={true}
+        loopAdditionalSlides={3}
         // navigation
         onSwiper={(swiper) => setSwiper(swiper)}
-        onSlideChange={() => console.log('slide change')}
+        // onSlideChange={() => console.log('slide change')}
+        breakpoints={
+          {
+            "743": {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            "990": {
+              slidesPerView: 3,
+              spaceBetween: 60,
+            },
+            "1120": {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+            "1440": {
+              slidesPerView: 6,
+              spaceBetween: 40,
+            },
+          }
+        }
       >
         <SwiperSlide>
           <CategoryBlock>
