@@ -57,6 +57,9 @@ const SlideContent = styled.div`
   display:flex;
   align-items:flex-end;
   color:${({ theme }) => theme.colors.white};
+  @media${({ theme }) => theme.media.small} {
+    background: linear-gradient(0deg, #1F2670 29.82%, rgba(39, 48, 139, 0) 99.68%);
+  }
   
 `
 
@@ -69,11 +72,20 @@ const SlideContentWrapper = styled.div`
     @media${({ theme }) => theme.media.extraLarge} {
       margin-bottom:60px;
     }
+    @media${({ theme }) => theme.media.small} {
+      margin-bottom:30px;
+    }
+    
   }
 
   @media${({ theme }) => theme.media.large} {
     max-width:490px;
     margin-left:60px;
+  }
+  @media${({ theme }) => theme.media.small} {
+    margin:0; 
+    padding:15px 15px 50px;
+    max-width:100%;
   }
   
 `

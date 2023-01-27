@@ -6,13 +6,13 @@ const MenuBtn = styled.div`
     width: 35px;
     height: 25px;
     position: absolute;
-    top: 30px;
-    right: 0;
+    top: 40px;
+    right: 10px;
     outline: none;
     z-index: 305;
     cursor:pointer;
     display:none;
-    @media(${({ theme }) => theme.media.small}){
+    @media${({ theme }) => theme.media.small}{
         display:block;
     }
 `
@@ -37,8 +37,13 @@ const Bar = styled.div`
 `
 const MobileNavbar = styled.div`
     display:block;
-    @media(${({ theme }) => theme.media.small}){    
-        display:none;
+    @media${({ theme }) => theme.media.small}{
+        background: ${({ theme } )=> theme.colors.white};
+        padding:0;
+        // box-shadow: 0 2px 17px -2px rgba(0,0,0,0.74);
+        height:0;
+        overflow:hidden;
+        transition:0.4s;
     }
 `
 const MenuBlock = styled.section`
@@ -58,7 +63,9 @@ const MenuBlock = styled.section`
             }
         }
         ${MobileNavbar} {
-            display:block;
+            // display:block;
+            height:auto;
+            padding:10px 0 0;
         }
     }
 `
@@ -74,7 +81,6 @@ const Menu = () => {
 
     return (
         <MenuBlock className={ menuOpen ? 'show' : ''}>
-            
             <MenuBtn  onClick={() => {toggleMenu(); console.log('click?')}}>
                 <Bar/>
                 <Bar/>

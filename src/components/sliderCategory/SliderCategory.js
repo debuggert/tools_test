@@ -65,6 +65,9 @@ const SliderName = styled.div`
 
 const BlockCategory = styled.div`
   position:relative;
+  @media${({ theme }) => theme.media.small} {
+    padding-bottom:50px;
+  }
 
 `
 const BlockCategoryTop = styled.div`
@@ -80,6 +83,12 @@ const SliderBtnContainer = styled.div`
   display:flex;
   justify-content:space-between;
   width:102px;
+  @media${({ theme }) => theme.media.small} {
+    top:240px;
+    left:0;
+    right:0;
+    width:100%;
+  }
 `
 
 
@@ -122,9 +131,9 @@ export default () => {
               slidesPerView: 2,
               spaceBetween: 40,
             },
-            "425": {
+            "410": {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 15,
             },
             "540": {
               slidesPerView: 4,

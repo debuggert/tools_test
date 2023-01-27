@@ -17,6 +17,9 @@ const RounderBox = styled.article`
   @media${({ theme }) => theme.media.extraLarge} {
     height:590px;
   }
+  @media${({ theme }) => theme.media.small} {
+    height:auto;
+  }
 `
 const RounderBoxWrapper = styled.div`
   padding:75px;
@@ -28,14 +31,24 @@ const RounderBoxWrapper = styled.div`
     max-width:640px;
     padding:60px;
   }
+  @media${({ theme }) => theme.media.small} {
+    padding:150px 15px 15px;
+  }
 `
 const RounderBoxImg = styled.div`
   position:absolute;
   top:0;
   right:0;
   bottom:0;
+  @media${({ theme }) => theme.media.small} {
+    left:0;
+  }
   img {
     height:100%;
+    @media${({ theme }) => theme.media.small} {
+      width:100%;
+      object-fit: cover;
+    }
   }
   &:before {
     content:'';
@@ -51,7 +64,14 @@ const RounderBoxImg = styled.div`
     @media${({ theme }) => theme.media.large} {
       width:140%;
     }
+    @media${({ theme }) => theme.media.small} {
+      background: linear-gradient(0deg, #FFFFFF 7.65%, rgba(255, 255, 255, 0.92) 23.96%, rgba(255, 255, 255, 0) 73.83%);
+      width:100%;
+      height:150%;
+      top:auto;
+    }
   }
+  
 `
 
 const P = styled.p`

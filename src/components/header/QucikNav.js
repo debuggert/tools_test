@@ -15,10 +15,8 @@ const QicikOrder = styled.div`
         background: ${({theme}) => theme.colors.white};
         justify-content:space-around;
         z-index:100;
-        padding:5px;
+        padding:5px 5px 15px;;
         box-shadow: 0px 1px 17px -2px rgba(0,0,0,0.74);
-
-
     }
 `;
 

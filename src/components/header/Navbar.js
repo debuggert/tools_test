@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 const NavbarContainer = styled.nav`
     width:100%;
+    @media${({ theme }) => theme.media.small}{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
 `
 
 const NavLinks = styled.a`
@@ -16,6 +22,10 @@ margin-right:19px;
 border-bottom: 1px solid rgba(155, 149, 145, 0.5);
 &:hover {
     border-color:transparent;
+}
+@media${({ theme }) => theme.media.small}{
+    display:block;
+    margin:0 auto 15px;
 }
 `
 
@@ -37,6 +47,10 @@ const PhoneLink = styled(NavLinks)`
         top:50%;
         left:-30px;
         margin-top:-12px;
+    }
+    @media${({ theme }) => theme.media.small}{
+        float:none;
+        margin:0 auto 10px;
     }
 `
 

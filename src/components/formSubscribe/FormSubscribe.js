@@ -55,6 +55,7 @@ const SubscrButton = styled(Button)`
     @media${({ theme }) => theme.media.small} {
         position:relative;
         top:auto;
+        right: auto;
         margin-top:10px;
     }
 `

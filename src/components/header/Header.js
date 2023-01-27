@@ -18,6 +18,15 @@ const HeaderBox = styled.header`
         max-width:770px;
         padding:10px 12px 0;
     }
+    @media${({ theme }) => theme.media.small}{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        padding-bottom:5px;
+        background:${({ theme }) => theme.colors.white};
+        box-shadow: 0 2px 17px -2px rgba(0,0,0,0.74);
+    }
 `
 
 const SmallNav = styled.nav`
@@ -40,8 +49,8 @@ const ContentColumn = styled.div`
     ${ ({display}) => display ? css`
     align-items:center` : ''};
     @media${({ theme }) => theme.media.small} {
-        width:100%;
-        display:block;
+        width:auto;
+        // display:block;
     }
 `
 
@@ -49,7 +58,11 @@ const LogoBox = styled.div`
     margin-right:58px;
     display:inline-block;
     @media${({ theme }) => theme.media.small} {
-        margin:0;
+        margin:0 20px 0 0;
+        max-width:58px;
+        svg{
+            width:100%;
+        }
     }
 `
 
