@@ -15,8 +15,16 @@ const SearchIco = styled.div`
     width:31px;
     height:30px;
     background: url("data:image/svg+xml,%3Csvg width='31' height='30' viewBox='0 0 31 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='21.354' y='20' width='11.8561' height='2' rx='1' transform='rotate(42.6122 21.354 20)' fill='%239B9591'/%3E%3Ccircle cx='12.5' cy='12.5' r='11.5' stroke='%239B9591' stroke-width='2'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
-    background-size:cover;  
-    z-index:2
+    background-size:contain;  
+    z-index:2;
+    @media${({ theme }) => theme.media.extraLarge} {
+        width:24px;
+        height:23px;
+    }
+    @media${({ theme }) => theme.media.large} {
+        width:20px;
+        height:19px;
+    }
 `;
 const SearchInput = styled.input`
     width:100%;
@@ -30,6 +38,9 @@ const SearchInput = styled.input`
     border-radius: 8px;
     border:0;
     outline:none;
+    @media${({ theme }) => theme.media.large} {
+        padding-left:40px;
+    }
 `
 
 const SearchProduct = () => {

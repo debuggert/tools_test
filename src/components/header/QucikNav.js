@@ -71,15 +71,26 @@ const CartCounter = styled.span`
     top:-5px;
     right:-5px;
     display:block;
-    background: rgba(72, 89, 240, 0.99);
-    outline: 2px solid rgba(72, 89, 240, 0.2);
+    background: rgba(72, 89, 240, 0.2);
     border-radius: 10px;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 12px;
     color: ${({ theme }) => theme.colors.white};
-    padding:4px 4px 2px;
+    padding:6px 6px 4px;
+    z-index:2;
+    &:before {
+        content:'';
+        position:absolute;
+        top:2px;
+        left:2px;
+        right:2px;
+        bottom:2px;
+        background: rgba(72, 89, 240, 0.99);
+        border-radius: 10px;
+        z-index:-1;
+    }
     @media${({ theme }) => theme.media.small} {
         top:-3px;
         right:-7px;

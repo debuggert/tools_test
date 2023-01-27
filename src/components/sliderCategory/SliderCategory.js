@@ -118,11 +118,27 @@ export default () => {
         // onSlideChange={() => console.log('slide change')}
         breakpoints={
           {
-            "743": {
+            "320": {
               slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            "425": {
+              slidesPerView: 3,
               spaceBetween: 30,
             },
-            "990": {
+            "540": {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+            "600": {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+            "690": {
+              slidesPerView: 5,
+              spaceBetween: 30,
+            },
+            "768": {
               slidesPerView: 3,
               spaceBetween: 60,
             },

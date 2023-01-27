@@ -24,6 +24,10 @@ const RounderBoxWrapper = styled.div`
   z-index:5;
   width:100%;
   max-width:730px;
+  @media${({ theme }) => theme.media.large} {
+    max-width:640px;
+    padding:60px;
+  }
 `
 const RounderBoxImg = styled.div`
   position:absolute;
@@ -43,6 +47,9 @@ const RounderBoxImg = styled.div`
     background: linear-gradient(90deg, #FFFFFF 7.65%, rgba(255, 255, 255, 0.92) 23.96%, rgba(255, 255, 255, 0) 73.83%);
     @media${({ theme }) => theme.media.extraLarge} {
       width:95%;
+    }
+    @media${({ theme }) => theme.media.large} {
+      width:140%;
     }
   }
 `

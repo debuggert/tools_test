@@ -10,6 +10,7 @@ const SliderButton = styled.button`
     position:relative;
     cursor:pointer;
     transition:0.4s;
+    user-select:none;
     &:hover {
         transform:scale(1.1,1.1);
     }

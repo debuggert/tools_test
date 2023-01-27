@@ -19,6 +19,12 @@ const InputMail = styled.input`
     line-height: 1.02em;
     padding:19px 175px 19px 20px;
     color: ${({ theme }) => theme.colors.font_input_black};
+    @media${({ theme }) => theme.media.large} {
+        font-size:14px;
+    }
+    @media${({ theme }) => theme.media.small} {
+        padding-right:20px;
+    }
 `
 
 const FieldsetBox = styled.fieldset`
@@ -37,9 +43,19 @@ const SubscrButton = styled(Button)`
     top:3px;
     right:4px;
     border-radius:8px;
-    @media${({ theme }) => theme.media.small} {
+    @media${({ theme }) => theme.media.extraLarge} {
+        line-height:45px;
+        top:4px;
+    }
+    @media${({ theme }) => theme.media.large} {
         font-size:14px;
+        line-height:46px;
+        
+    }
+    @media${({ theme }) => theme.media.small} {
         position:relative;
+        top:auto;
+        margin-top:10px;
     }
 `
 
@@ -51,7 +67,7 @@ const SubscrLabel = styled.label`
     color: ${({theme}) => theme.colors.footer_head};
     display:block;
     margin-bottom:20px;
-    @media${({ theme }) => theme.media.small} {
+    @media${({ theme }) => theme.media.large} {
         font-size:14px;
     }
 `

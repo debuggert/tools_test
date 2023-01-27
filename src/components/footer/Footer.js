@@ -23,7 +23,7 @@ const FooterWrapper = styled.div`
 const FooterColumn = styled.section`
    display:flex;
    justify-content:space-between;
-   @media${({ theme }) => theme.media.medium} {
+   @media${({ theme }) => theme.media.large} {
         display:block;
     }
     
@@ -40,6 +40,7 @@ const FooterNav = styled.div`
     }
     @media${({ theme }) => theme.media.large} {
         max-width:100%;
+        font-size:9px;
     }
     @media${({ theme }) => theme.media.small} {
         flex-direction:column;
@@ -54,6 +55,7 @@ const FooterSubscr = styled.div`
     }
     @media${({ theme }) => theme.media.large} {
         max-width:100%;
+        
     }
 `
 

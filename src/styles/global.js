@@ -17,7 +17,7 @@ export default createGlobalStyle`
     }
 
     @media${({ theme }) => theme.media.large} {
-      font-size:6px;
+      font-size:7px;
     }
     @media${({ theme }) => theme.media.small} {
         padding-bottom:42px;
